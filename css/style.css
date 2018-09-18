@@ -1,0 +1,292 @@
+ /*connect lists */
+  #sortable1, #sortable2 {
+    border: 1px solid #eee;
+    width: 142px;
+    min-height: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0 0 0;
+    float: left;
+    margin-right: 10px;
+  }
+  #sortable1 li, #sortable2 li {
+    margin: 0 5px 5px 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    width: 120px;
+  }
+  /*display as grid */
+    #sortablegrid { 
+      list-style-type: none; 
+      margin: 0; 
+      padding: 0; 
+      width: 450px; }
+  #sortablegrid li { 
+    margin: 3px 3px 3px 0; 
+    padding: 1px;
+   float: left; 
+   width: 100px; 
+   height: 90px; 
+    font-size: 4em; 
+    text-align: center; }
+
+    /*portlets*/
+      body {
+    min-width: 520px;
+  }
+  .column {
+    width: 170px;
+    float: left;
+    padding-bottom: 100px;
+    padding-top:100px;
+  }
+  .portlet {
+    margin: 0 1em 1em 0;
+    padding: 0.3em;
+  }
+  .portlet-header {
+    padding: 0.2em 0.3em;
+    margin-bottom: 0.5em;
+    position: relative;
+  }
+  .portlet-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8px;
+  }
+  .portlet-content {
+    padding: 0.4em;
+  }
+  .portlet-placeholder {
+    border: 1px dotted black;
+    margin: 0 1em 1em 0;
+    height: 50px;
+  }
+
+  /*inclue/exclude*/
+    #sortable1, #sortable2 { 
+      list-style-type: none; 
+      margin: 0; 
+      padding: 0; 
+      zoom: 1; }
+  #sortable1 li, #sortable2 li { 
+    margin: 0 5px 5px 5px;
+   padding: 3px; 
+   width: 90%; }
+
+   /*handling empty list */
+     #sortable1, #sortable2, #sortable3 { 
+      list-style-type: none; 
+      margin: 0; 
+      float: left; 
+      margin-right: 10px; 
+      background: #eee; 
+      padding: 5px; 
+      width: 143px;}
+  #sortable1 li, #sortable2 li, #sortable3 li { 
+    margin: 5px; 
+    padding: 5px; 
+    font-size: 1.2em; 
+    width: 120px; }
+
+    /*RESIZABLE*/
+      #resizable { width: 150px; 
+        height: 150px; 
+        padding: 0.5em; }
+  #resizable h3 { 
+    text-align: center; 
+    margin: 0; }
+  .ui-resizable-helper { 
+    border: 1px dotted gray; }
+
+    /*constrain*/
+      #container { width: 300px; height: 300px; }
+  #container h3 { text-align: center; margin: 0; margin-bottom: 10px; }
+  #resizable10 { background-position: top left; width: 150px; height: 150px; }
+  #resizable10, #container { padding: 0.5em; }
+
+  /*ghost*/
+    #resizable9 { width: 150px; height: 150px; padding: 0.5em; }
+  #resizable9 h3 { text-align: center; margin: 0; }
+  .ui-resizable9-ghost { border: 1px dotted gray; }
+
+  /*text area*/
+    .ui-resizable8-se {
+    bottom: 17px;
+  }
+
+  /*synchronize resize*/
+    #resizable7 { 
+      background-position: 
+      top left; }
+  #resizable7, #also { 
+    width: 150px; 
+    height: 120px; 
+    padding: 0.5em; }
+  #resizable7 h3, #also h3 { 
+    text-align: center; 
+    margin: 0; }
+  #also { 
+    margin-top: 1em; }
+
+  /*helper*/
+    #resizable6 { width: 150px; 
+      height: 150px; 
+      padding: 0.5em; }
+  #resizable6 h3 { 
+    text-align: center; 
+    margin: 0; }
+  .ui-resizable6-helper { 
+    border: 2px dotted #00F; }
+
+/******accordion***********/
+/*fill up*/
+     #accordion-resizer {
+        padding: 10px;
+        width: 350px;
+        height: 220px;
+      }
+
+/**********AutoComplete***********/
+/*combobox*/
+     .custom-combobox {
+    position: relative;
+    display: inline-block;
+  }
+  .custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+  }
+  .custom-combobox-input {
+    margin: 0;
+    padding: 5px 10px;
+  }
+  /*xml data*/
+    .ui-autocomplete-loading {
+    background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+  }
+
+  /*******************checkbox*******/
+   /*product selector*/
+         .shape {
+      margin-left: 4em;
+      margin-top: 2.5em;
+      height: 8em;
+      width: 8em;
+      box-shadow: 4px 4px 8px;
+      color: #ccc;
+      background-repeat: no-repeat;
+      background-size: 90%;
+      background-position: 50%;
+    }
+    .circle, .pill {
+      border-radius: 8em;
+    }
+    .pill, .rectangle {
+      width: 16em;
+    }
+    .square, .circle {
+      margin-left: 9em;
+    }
+    .border {
+      border: 2px solid #333333;
+    }
+    .toggles {
+      width: 200px;
+    }
+    .toggle-wrap, .shape {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .controls {
+      background: #ccc;
+      padding: 1em;
+      display: inline-block;
+    }
+
+/*************tabs*********/
+/*vertical tabs*/
+     .ui-tabs-vertical { width: 55em; }
+  .ui-tabs-vertical .ui-tabs-nav { 
+    padding: .2em .1em .2em .2em; 
+    float: left; 
+    width: 12em; }
+  .ui-tabs-vertical .ui-tabs-nav li { 
+    clear: left; 
+    width: 100%; 
+    border-bottom-width: 1px !important; 
+    border-right-width: 0 !important; 
+    margin: 0 -1px .2em 0; }
+  .ui-tabs-vertical .ui-tabs-nav li a { 
+    display:block; }
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { 
+    padding-bottom: 0; 
+    padding-right: .1em; 
+    border-right-width: 1px; }
+  .ui-tabs-vertical .ui-tabs-panel { 
+    padding: 1em; 
+    float: right; 
+    width: 40em;}
+   
+/**********tooltip*******/
+/*custom*/
+          .photo {
+        width: 300px;
+        text-align: center;
+      }
+      .photo .ui-widget-header {
+        margin: 1em 0;
+      }
+      .map {
+        width: 350px;
+        height: 350px;
+      }
+      .ui-tooltip {
+        max-width: 350px;
+      }
+/*track the mouse*/
+      label {
+    display: inline-block;
+    width: 5em;
+  }
+
+/*********Effect***********/
+    .toggler { width: 500px; 
+      height: 200px; 
+      position: relative; }
+    #button { padding: .5em 1em; 
+      text-decoration: none; }
+    #effect { width: 240px; 
+      height: 170px; padding: 0.4em; 
+      position: relative; }
+    #effect h3 { margin: 0; 
+      padding: 0.4em; 
+      text-align: center; }
+    .ui-effects-transfer { 
+      border: 2px dotted gray; }
+  /*add class*/
+         .toggler2 { 
+          width: 500px; 
+          height: 200px; 
+          position: relative; }
+    #button2 { 
+      padding: .5em 1em; 
+      text-decoration: none; }
+    #effect2 { 
+      width: 240px;  
+      padding: 1em; 
+      border: 1px solid #000; 
+      background: #eee; 
+      color: #333; }
+    .newClass { 
+      text-indent: 40px; 
+      letter-spacing: .4em; 
+      width: 410px; 
+      height: 120px; 
+      padding: 30px; 
+      margin: 10px; 
+      font-size: 1.1em; }

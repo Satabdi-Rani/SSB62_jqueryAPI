@@ -1,0 +1,1389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--  CSS -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <title>jquery API</title>
+  </head>
+  <body>
+    <!-- sortable default -->
+    <h1>Sortable-default</h1>
+    <ul id="sortable">
+      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+    </ul>
+
+  <!-- connect lists -->
+  <h1>connect lists</h1>
+    <ul id="sortable1" class="connectedSortable">
+      <li class="ui-state-default">Item 1</li>
+      <li class="ui-state-default">Item 2</li>
+      <li class="ui-state-default">Item 3</li>
+      <li class="ui-state-default">Item 4</li>
+      <li class="ui-state-default">Item 5</li>
+    </ul>
+     
+    <ul id="sortable2" class="connectedSortable">
+      <li class="ui-state-highlight">Item 1</li>
+      <li class="ui-state-highlight">Item 2</li>
+      <li class="ui-state-highlight">Item 3</li>
+      <li class="ui-state-highlight">Item 4</li>
+      <li class="ui-state-highlight">Item 5</li>
+    </ul>
+    <br>
+    <!-- display as grid -->
+    <h1>Display as grid</h1>
+    <ul id="sortablegrid">
+      <li class="ui-state-default">1</li>
+      <li class="ui-state-default">2</li>
+      <li class="ui-state-default">3</li>
+      <li class="ui-state-default">4</li>
+      <li class="ui-state-default">5</li>
+      <li class="ui-state-default">6</li>
+      <li class="ui-state-default">7</li>
+      <li class="ui-state-default">8</li>
+      <li class="ui-state-default">9</li>
+      <li class="ui-state-default">10</li>
+      <li class="ui-state-default">11</li>
+      <li class="ui-state-default">12</li>
+    </ul>
+
+    <!-- portlets -->
+    <div class="column">
+ 
+  <div class="portlet">
+        <div class="portlet-header">Feeds</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+      </div>
+     
+      <div class="portlet">
+        <div class="portlet-header">News</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+      </div>
+     
+    </div>
+     
+    <div class="column">
+     
+      <div class="portlet">
+        <div class="portlet-header">Shopping</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+      </div>
+     
+    </div>
+     
+    <div class="column">
+     
+      <div class="portlet">
+        <div class="portlet-header">Links</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+      </div>
+     
+      <div class="portlet">
+        <div class="portlet-header">Images</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+      </div>
+     
+    </div>
+
+    <!-- include/exclude -->
+    <h3 class="docs">Specify which items are sortable:</h3>
+ 
+    <ul id="sortable1">
+      <li class="ui-state-default">Item 1</li>
+      <li class="ui-state-default ui-state-disabled">(I'm not sortable or a drop target)</li>
+      <li class="ui-state-default ui-state-disabled">(I'm not sortable or a drop target)</li>
+      <li class="ui-state-default">Item 4</li>
+    </ul>
+     
+    <h3 class="docs">Cancel sorting (but keep as drop targets):</h3>
+     
+    <ul id="sortable2">
+      <li class="ui-state-default">Item 1</li>
+      <li class="ui-state-default ui-state-disabled">(I'm not sortable)</li>
+      <li class="ui-state-default ui-state-disabled">(I'm not sortable)</li>
+      <li class="ui-state-default">Item 4</li>
+    </ul>
+
+    <!--handle empty list  -->
+
+    <ul id="sortable1" class="droptrue">
+      <li class="ui-state-default">Can be dropped..</li>
+      <li class="ui-state-default">..on an empty list</li>
+      <li class="ui-state-default">Item 3</li>
+      <li class="ui-state-default">Item 4</li>
+      <li class="ui-state-default">Item 5</li>
+    </ul>
+     
+    <ul id="sortable2" class="dropfalse">
+      <li class="ui-state-highlight">Cannot be dropped..</li>
+      <li class="ui-state-highlight">..on an empty list</li>
+      <li class="ui-state-highlight">Item 3</li>
+      <li class="ui-state-highlight">Item 4</li>
+      <li class="ui-state-highlight">Item 5</li>
+    </ul>
+     
+    <ul id="sortable3" class="droptrue">
+    </ul>
+     
+    <br style="clear:both">
+
+    <!-- resizable -->
+<!--     <div id="resizable" class="ui-widget-content">
+  <h3 class="ui-widget-header">Resizable</h3>
+</div> -->
+    <h1>resizable Animate</h1>
+    <section class="resize">
+       <div id="resizable" class="ui-widget-content">
+            <h3 class="ui-widget-header">Animate</h3>
+          </div>
+        </section>
+<!-- constrain retain  -->
+        <div id="container" class="ui-widget-content">
+      <h3 class="ui-widget-header">Containment</h3>
+      <div id="resizable10" class="ui-state-active">
+        <h3 class="ui-widget-header">Resizable</h3>
+      </div>
+    </div>
+<!-- ghost -->
+<h4>ghost</h4>
+  <div id="resizable9" class="ui-widget-content">
+      <h3 class="ui-widget-header">Ghost</h3>
+    </div>
+<!-- text area -->
+<h4>text area</h4>
+ <textarea id="resizable8" rows="5" cols="20"></textarea>
+<!-- synchronize resize -->
+<h4>synchronize resize</h4>
+   <div id="resizable7" class="ui-widget-header">
+      <h3 class="ui-state-active">Resize</h3>
+    </div>
+     
+    <div id="also" class="ui-widget-content">
+      <h3 class="ui-widget-header">will also resize</h3>
+    </div>
+<!-- helper -->
+  <h4>helper</h4>
+  <div id="resizable6" class="ui-widget-content">
+      <h3 class="ui-widget-header">Helper</h3>
+    </div>
+
+  <!-- *********Accordion*********** -->
+  <!-- default -->
+  <h1> Accordion</h1>
+     <h4>default</h4>
+     <div id="accordion">
+       <h3>Section 1</h3>
+          <div>
+            <p>
+            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+            </p>
+          </div>
+          <h3>Section 2</h3>
+          <div>
+            <p>
+            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+            suscipit faucibus urna.
+            </p>
+          </div>
+          <h3>Section 3</h3>
+          <div>
+            <p>
+            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+            </p>
+            <ul>
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+            </ul>
+          </div>
+          <h3>Section 4</h3>
+          <div>
+            <p>
+            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+            mauris vel est.
+            </p>
+            <p>
+            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+            </p>
+          </div>
+        </div>
+<!-- customize icon -->
+    <h4>customize icon</h4>
+    <div id="accordion3">
+      <h3>Section 1</h3>
+      <div>
+        <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+      </div>
+      <h3>Section 2</h3>
+      <div>
+        <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+      </div>
+      <h3>Section 3</h3>
+      <div>
+        <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+        <ul>
+          <li>List item one</li>
+          <li>List item two</li>
+          <li>List item three</li>
+        </ul>
+      </div>
+      <h3>Section 4</h3>
+      <div>
+        <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+      </div>
+    </div>
+     
+     <button id="toggle">Toggle icons</button>
+<!-- fil space -->
+     <h3 class="docs">Resize the outer container:</h3>
+ 
+       <div id="accordion-resizer" class="ui-widget-content">
+        <div id="accordion4">
+         <h3>Section 1</h3>
+         <div>
+          <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+        </div>
+        <h3>Section 2</h3>
+        <div>
+          <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+        </div>
+        <h3>Section 3</h3>
+        <div>
+          <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+          <ul>
+            <li>List item one</li>
+            <li>List item two</li>
+            <li>List item three</li>
+          </ul>
+        </div>
+        <h3>Section 4</h3>
+        <div>
+          <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+        </div>
+      </div>
+    </div>
+<!-- no auto height -->
+    <h3>No auto height</h3>
+    <div id="accordion5">
+      <h3>Section 1</h3>
+      <div>
+        <p>Mauris mauris ante, blandit et, ultrices a, susceros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+      </div>
+      <h3>Section 2</h3>
+      <div>
+        <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+      </div>
+      <h3>Section 3</h3>
+      <div>
+        <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+        <ul>
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+        </ul>
+      </div>
+    </div>
+<!-- sortable -->
+     <h3>sortable</h3>
+     <div id="accordion6">
+      <div class="group">
+        <h3>Section 1</h3>
+        <div>
+          <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+        </div>
+      </div>
+      <div class="group">
+        <h3>Section 2</h3>
+        <div>
+          <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+        </div>
+      </div>
+      <div class="group">
+        <h3>Section 3</h3>
+        <div>
+          <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+          <ul>
+            <li>List item one</li>
+            <li>List item two</li>
+            <li>List item three</li>
+          </ul>
+        </div>
+      </div>
+      <div class="group">
+        <h3>Section 4</h3>
+        <div>
+          <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+        </div>
+      </div>
+
+<!-- *************Autocomplete******** -->
+<!-- default -->
+    <h1>Autocomplete</h1>
+    <h3>default</h3>
+     <div class="ui-widget">
+        <label for="tags">Tags: </label>
+        <input id="tags">
+      </div>
+<!-- combobox -->
+    <h3>combobox</h3>
+    <div class="ui-widget4">
+  <label>Your preferred programming language: </label>
+  <select id="combobox">
+    <option value="">Select one...</option>
+    <option value="ActionScript">ActionScript</option>
+    <option value="AppleScript">AppleScript</option>
+    <option value="Asp">Asp</option>
+    <option value="BASIC">BASIC</option>
+    <option value="C">C</option>
+    <option value="C++">C++</option>
+    <option value="Clojure">Clojure</option>
+    <option value="COBOL">COBOL</option>
+    <option value="ColdFusion">ColdFusion</option>
+    <option value="Erlang">Erlang</option>
+    <option value="Fortran">Fortran</option>
+    <option value="Groovy">Groovy</option>
+    <option value="Haskell">Haskell</option>
+    <option value="Java">Java</option>
+    <option value="JavaScript">JavaScript</option>
+    <option value="Lisp">Lisp</option>
+    <option value="Perl">Perl</option>
+    <option value="PHP">PHP</option>
+    <option value="Python">Python</option>
+    <option value="Ruby">Ruby</option>
+    <option value="Scala">Scala</option>
+    <option value="Scheme">Scheme</option>
+  </select>
+  </div>
+   <button id="toggle">Show underlying select</button>
+<!-- xml  -->
+
+      <div class="ui-widget">
+        <label for="birds">London matches: </label>
+        <input id="birds">
+      </div>
+       
+      <div class="ui-widget" style="margin-top:2em; font-family:Arial">
+        Result:
+        <div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
+      </div>
+
+<!-- **********checkbox************ -->
+<!-- default -->
+     <div class="widget">
+        <h1>Checkbox and radio button widgets</h1>
+       
+        <h2>Radio Group</h2>
+        <fieldset>
+          <legend>Select a Location: </legend>
+          <label for="radio-1">New York</label>
+          <input type="radio" name="radio-1" id="radio-1">
+          <label for="radio-2">Paris</label>
+          <input type="radio" name="radio-1" id="radio-2">
+          <label for="radio-3">London</label>
+          <input type="radio" name="radio-1" id="radio-3">
+        </fieldset>
+       
+        <h2>Checkbox</h2>
+        <fieldset>
+          <legend>Hotel Ratings: </legend>
+          <label for="checkbox-1">2 Star</label>
+          <input type="checkbox" name="checkbox-1" id="checkbox-1">
+          <label for="checkbox-2">3 Star</label>
+          <input type="checkbox" name="checkbox-2" id="checkbox-2">
+          <label for="checkbox-3">4 Star</label>
+          <input type="checkbox" name="checkbox-3" id="checkbox-3">
+          <label for="checkbox-4">5 Star</label>
+          <input type="checkbox" name="checkbox-4" id="checkbox-4">
+        </fieldset>
+       
+        <h2>Checkbox nested in label</h2>
+        <fieldset>
+          <legend>Bed Type: </legend>
+          <label for="checkbox-nested-1">2 Double
+            <input type="checkbox" name="checkbox-nested-1" id="checkbox-nested-1">
+          </label>
+          <label for="checkbox-nested-2">2 Queen
+            <input type="checkbox" name="checkbox-nested-2" id="checkbox-nested-2">
+          </label>
+          <label for="checkbox-nested-3">1 Queen
+            <input type="checkbox" name="checkbox-nested-3" id="checkbox-nested-3">
+          </label>
+          <label for="checkbox-nested-4">1 King
+            <input type="checkbox" name="checkbox-nested-4" id="checkbox-nested-4">
+          </label>
+        </fieldset>
+      </div>
+<!-- no icons -->
+       <div class="widget2">
+          <h1>Checkbox and radio button widgets</h1>
+         
+          <h2>Radio Group</h2>
+          <fieldset>
+            <legend>Select a Location: </legend>
+            <label for="radio-1">New York</label>
+            <input type="radios" name="radio-1" id="radio-1">
+            <label for="radio-2">Paris</label>
+            <input type="radios" name="radio-1" id="radio-2">
+            <label for="radio-3">London</label>
+            <input type="radios" name="radio-1" id="radio-3">
+          </fieldset>
+         
+          <h2>Checkbox</h2>
+          <fieldset>
+            <legend>Hotel Ratings: </legend>
+            <label for="checkbox-1">2 Star</label>
+            <input type="checkboxy" name="checkbox-1" id="checkbox-1">
+            <label for="checkbox-2">3 Star</label>
+            <input type="checkboxy" name="checkbox-2" id="checkbox-2">
+            <label for="checkbox-3">4 Star</label>
+            <input type="checkboxy" name="checkbox-3" id="checkbox-3">
+            <label for="checkbox-4">5 Star</label>
+            <input type="checkboxy" name="checkbox-4" id="checkbox-4">
+          </fieldset>
+         
+          <h2>Checkbox nested in label</h2>
+          <fieldset>
+            <legend>Bed Type: </legend>
+            <label for="checkbox-nested-1">2 Double
+              <input type="checkboxy" name="checkbox-nested-1" id="checkbox-nested-1">
+            </label>
+            <label for="checkbox-nested-2">2 Queen
+              <input type="checkboxy" name="checkbox-nested-2" id="checkbox-nested-2">
+            </label>
+            <label for="checkbox-nested-3">1 Queen
+              <input type="checkboxy" name="checkbox-nested-3" id="checkbox-nested-3">
+            </label>
+            <label for="checkbox-nested-4">1 King
+              <input type="checkboxy" name="checkbox-nested-4" id="checkbox-nested-4">
+            </label>
+          </fieldset>
+        </div>
+<!-- product selector -->
+    <div class="controls">
+      <div class="brand-wrap">
+        <h3>1.) Select a brand</h3>
+        <div class="brand">
+          <label for="brand-jquery">jQuery</label>
+          <input type="radio" name="brand" id="brand-jquery" data-background-color="#0769AD" data-color="#7ACEF4" data-background-image="url(images/jquery.png)">
+          <label for="brand-jquery-ui">jQuery UI</label>
+          <input type="radio" name="brand" id="brand-jquery-ui" data-background-color="#B24926" data-color="#FAA523" data-background-image="url(images/jquery-ui.png)" checked>
+          <label for="brand-jquery-mobile">jQuery Mobile</label>
+          <input type="radio" name="brand" id="brand-jquery-mobile" data-background-color="#108040" data-color="#3EB249" data-background-image="url(images/jquery-mobile.png)">
+          <label for="brand-sizzle">Sizzle</label>
+          <input type="radio" name="brand" id="brand-sizzle" data-background-color="#9A1B1E" data-color="#FAA523" data-background-image="url(images/sizzle.png)">
+          <label for="brand-qunit">QUnit</label>
+          <input type="radio" name="brand" id="brand-qunit" data-background-color="#390F39" data-color="#9C3493" data-background-image="url(images/qunit.png)">
+        </div>
+      </div>
+      <div class="shape-wrap">
+        <h3>2.) Select a shape</h3>
+        <div class="shape-bar">
+          <label for="shape-circle">Circle</label>
+          <input type="radio" name="shape" id="shape-circle" value="circle" checked>
+          <label for="shape-square">Square</label>
+          <input type="radio" name="shape" id="shape-square" value="square">
+          <label for="shape-pill">Pill</label>
+          <input type="radio" name="shape" id="shape-pill" value="pill">
+          <label for="shape-rectangle">Rectangle</label>
+          <input type="radio" name="shape" id="shape-rectangle" value="rectangle">
+        </div>
+      </div>
+      <div class="toggle-wrap">
+        <h3>3.) Customize</h3>
+        <div class="toggles">
+          <label for="color">Shadow</label>
+          <input class="toggle brand-toggle" type="checkbox" name="color" id="color">
+          <label for="border">Border</label>
+          <input class="toggle" type="checkbox" name="border" id="border">
+          <label for="background-color">Background</label>
+          <input class="toggle brand-toggle" type="checkbox" name="background-color" id="background-color" checked>
+          <label for="background-image">Background Image</label>
+          <input class="toggle brand-toggle" type="checkbox" name="background-image" id="background-image" checked>
+        </div>
+      </div>
+      <div class="shape circle background jquery-ui"></div>
+    </div>
+
+<!--***************** Date picker************** -->
+<!-- animation -->
+     <p>Date: <input type="text" id="datepicker" size="30"></p>
+ 
+      <p>Animations:<br>
+        <select id="anim">
+          <option value="show">Show (default)</option>
+          <option value="slideDown">Slide down</option>
+          <option value="fadeIn">Fade in</option>
+          <option value="blind">Blind (UI Effect)</option>
+          <option value="bounce">Bounce (UI Effect)</option>
+          <option value="clip">Clip (UI Effect)</option>
+          <option value="drop">Drop (UI Effect)</option>
+          <option value="fold">Fold (UI Effect)</option>
+          <option value="slide">Slide (UI Effect)</option>
+          <option value="">None</option>
+        </select>
+      </p>
+<!-- multiple month -->
+     <p>Date: <input type="text" id="datepicker7"></p>
+<!-- localize calender -->
+     
+      <p>Date: <input type="text8" id="datepicker8">&nbsp;
+        <select id="locale">
+          <option value="ar">Arabic (&#8235;(&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+          <option value="zh-TW">Chinese Traditional (&#32321;&#39636;&#20013;&#25991;)</option>
+          <option value="">English</option>
+          <option value="fr" selected="selected">French (Fran&ccedil;ais)</option>
+          <option value="he">Hebrew (&#8235;(&#1506;&#1489;&#1512;&#1497;&#1514;</option>
+        </select></p>
+<!-- show week -->
+      <p>Date: <input type="text" id="datepicker9"></p>
+        
+ <!-- *****************Dialog*************** -->
+ <!-- default -->
+         <div id="dialog" title="Basic dialog">
+          <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+        </div>
+<!-- animation -->
+        <div id="dialog2" title="Basic dialog2">
+          <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+        </div>
+         
+        <button id="opener">Open Dialog</button>
+<!-- modal confirmation -->
+       <div id="dialog-confirm" title="Empty the recycle bin?">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>These items will be permanently deleted and cannot be recovered. Are you sure?</p>
+      </div>
+       
+      <p>Sed vel diam id libero <a href="http://example.com">rutrum convallis</a>. Donec aliquet leo vel magna. Phasellus rhoncus faucibus ante. Etiam bibendum, enim faucibus aliquet rhoncus, arcu felis ultricies neque, sit amet auctor elit eros a lectus.</p>
+
+<!-- *************progressbar****************** -->
+<!-- default -->
+       <div id="progressbar1"></div>
+<!-- custom label -->
+       <div id="progressbar"><div class="progress-label">Loading...</div></div>
+
+<!-- ****************Tabs****************** -->
+<!-- vertical tabs -->
+     <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">Nunc tincidunt</a></li>
+          <li><a href="#tabs-2">Proin dolor</a></li>
+          <li><a href="#tabs-3">Aenean lacinia</a></li>
+        </ul>
+        <div id="tabs-1">
+          <h2>Content heading 1</h2>
+          <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+        </div>
+        <div id="tabs-2">
+          <h2>Content heading 2</h2>
+          <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+        </div>
+        <div id="tabs-3">
+          <h2>Content heading 3</h2>
+          <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+          <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+        </div>
+      </div>
+
+<!-- ******************tooltip*********** -->
+<!-- custom -->
+       <div class="ui-widget photo">
+          <div class="ui-widget-header ui-corner-all">
+            <h2>St. Stephen's Cathedral</h2>
+            <h3><a href="http://maps.google.com/maps?q=vienna,+austria&amp;z=11" data-geo="">Vienna, Austria</a></h3>
+          </div>
+          <a href="http://en.wikipedia.org/wiki/File:Wien_Stefansdom_DSC02656.JPG">
+            <img src="images/st-stephens.jpg" alt="St. Stephen&apos;s Cathedral" class="ui-corner-all">
+          </a>
+        </div>
+         
+        <div class="ui-widget photo">
+          <div class="ui-widget-header ui-corner-all">
+            <h2>Tower Bridge</h2>
+            <h3><a href="http://maps.google.com/maps?q=london,+england&amp;z=11" data-geo="">London, England</a></h3>
+          </div>
+          <a href="http://en.wikipedia.org/wiki/File:Tower_bridge_London_Twilight_-_November_2006.jpg">
+            <img src="images/tower-bridge.jpg" alt="Tower Bridge" class="ui-corner-all">
+          </a>
+        </div>
+         
+        <p>All images are part of <a href="http://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a>
+        and are licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en" title="Creative Commons Attribution-ShareAlike 3.0">CC BY-SA 3.0</a> by the copyright holder.</p>
+<!-- track the mouse -->
+    <p><a href="#" title="That&apos;s what this widget is">Tooltips</a> can be attached to any element. When you hover
+      the element with your mouse, the title attribute is displayed in a little box next to the element, just like a native tooltip.</p>
+      <p>But as it's not a native tooltip, it can be styled. Any themes built with
+      <a href="http://jqueryui.com/themeroller/" title="ThemeRoller: jQuery UI&apos;s theme builder application">ThemeRoller</a>
+      will also style tooltips accordingly.</p>
+      <p>Tooltips are also useful for form elements, to show some additional information in the context of each field.</p>
+      <p><label for="age">Your age:</label><input id="age" title="We ask for your age only for statistical purposes."></p>
+      <p>Hover the field to see the tooltip.</p>
+
+<!-- **************Effect************ -->
+<!-- default -->
+      <div class="toggler">
+        <div id="effect" class="ui-widget-content ui-corner-all">
+          <h3 class="ui-widget-header ui-corner-all">Effect</h3>
+          <p>
+            Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
+          </p>
+        </div>
+      </div>
+       
+      <select name="effects" id="effectTypes">
+        <option value="blind">Blind</option>
+        <option value="bounce">Bounce</option>
+        <option value="clip">Clip</option>
+        <option value="drop">Drop</option>
+        <option value="explode">Explode</option>
+        <option value="fade">Fade</option>
+        <option value="fold">Fold</option>
+        <option value="highlight">Highlight</option>
+        <option value="puff">Puff</option>
+        <option value="pulsate">Pulsate</option>
+        <option value="scale">Scale</option>
+        <option value="shake">Shake</option>
+        <option value="size">Size</option>
+        <option value="slide">Slide</option>
+        <option value="transfer">Transfer</option>
+      </select>
+       
+      <button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+<!-- add class -->
+       <div class="toggler2">
+  <div id="effect2" class="ui-corner-all">
+      Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+  </div>
+</div>
+ 
+<button id="button2" class="ui-state-default ui-corner-all">Run Effect</button>
+
+
+   
+    <!-- jQuery  -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- sortable default -->
+      <script>
+        $( function() {
+          $( "#sortable" ).sortable();
+          $( "#sortable" ).disableSelection();
+        } );
+        </script>
+    <!-- connect lists -->
+      <script>
+        $( function() {
+          $( "#sortable1, #sortable2" ).sortable({
+            connectWith: ".connectedSortable"
+          }).disableSelection();
+        } );
+        </script>
+    <!-- display as grid -->
+      <script>
+        $( function() {
+          $( "#sortable" ).sortable();
+          $( "#sortable" ).disableSelection();
+        } );
+        </script>
+    <!--portlets  -->
+      <script>
+  $( function() {
+    $( ".column" ).sortable({
+      connectWith: ".column",
+      handle: ".portlet-header",
+      cancel: ".portlet-toggle",
+      placeholder: "portlet-placeholder ui-corner-all"
+    });
+ 
+    $( ".portlet" )
+      .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+      .find( ".portlet-header" )
+        .addClass( "ui-widget-header ui-corner-all" )
+        .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+ 
+    $( ".portlet-toggle" ).on( "click", function() {
+      var icon = $( this );
+      icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+      icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
+    });
+  } );
+  </script>
+
+  <!-- include/exclude -->
+    <script>
+  $( function() {
+    $( "#sortable1" ).sortable({
+      items: "li:not(.ui-state-disabled)"
+    });
+ 
+    $( "#sortable2" ).sortable({
+      cancel: ".ui-state-disabled"
+    });
+ 
+    $( "#sortable1 li, #sortable2 li" ).disableSelection();
+  } );
+  </script>
+
+  <!-- hendling empty list -->
+    <script>
+      $( function() {
+        $( "ul.droptrue" ).sortable({
+          connectWith: "ul"
+        });
+     
+        $( "ul.dropfalse" ).sortable({
+          connectWith: "ul",
+          dropOnEmpty: false
+        });
+     
+        $( "#sortable1, #sortable2, #sortable3" ).disableSelection();
+      } );
+      </script>
+
+      <!-- RESIZABLE   -->
+       <!--  <script>
+          $( function() {
+            $( "#resizable" ).resizable();
+          } );
+          </script>
+          -->
+      <!-- animation -->
+        <script>
+          $( function() {
+            $( "#resizable" ).resizable({
+              animate: true
+            });
+          } );
+          </script>
+          <!-- constrain retain -->
+      <script>
+          $( function() {
+            $( "#resizable10" ).resizable({
+              containment: "#container"
+            });
+          } );
+          </script>
+  <!-- ghost -->
+    <script>
+      $( function() {
+        $( "#resizable9" ).resizable({
+          ghost: true
+        });
+      } );
+      </script>
+      <!-- text area -->
+    <script>
+      $( function() {
+        $( "#resizable8" ).resizable({
+          handles: "se"
+        });
+      } );
+      </script>
+<!-- synchronize resize -->
+      <script>
+        $( function() {
+          $( "#resizable7" ).resizable({
+            alsoResize: "#also"
+          });
+          $( "#also" ).resizable();
+        } );
+        </script>
+<!-- helper -->
+      <script>
+        $( function() {
+          $( "#resizable6" ).resizable({
+            helper: "ui-resizable-helper"
+          });
+        } );
+        </script>
+
+
+<!-- *********Accordion********* -->
+<!-- default -->
+     <script>
+        $( function() {
+          $( "#accordion" ).accordion();
+        } );
+        </script>
+<!-- customize icon -->
+      <script>
+        $( function() {
+          var icons = {
+            header: "ui-icon-circle-arrow-e",
+            activeHeader: "ui-icon-circle-arrow-s"
+          };
+          $( "#accordion3" ).accordion({
+            icons: icons
+          });
+          $( "#toggle" ).button().on( "click", function() {
+            if ( $( "#accordion3" ).accordion( "option", "icons" ) ) {
+              $( "#accordion3" ).accordion( "option", "icons", null );
+            } else {
+              $( "#accordion3" ).accordion( "option", "icons", icons );
+            }
+          });
+        } );
+        </script>
+  <!-- fill space -->
+    <script>
+      $( function() {
+        $( "#accordion4" ).accordion({
+          heightStyle: "fill"
+        });
+     
+        $( "#accordion-resizer" ).resizable({
+          minHeight: 140,
+          minWidth: 200,
+          resize: function() {
+            $( "#accordion4" ).accordion( "refresh" );
+          }
+        });
+      } );
+      </script>
+<!-- no auto height -->
+      <script>
+        $( function() {
+          $( "#accordion5" ).accordion({
+            heightStyle: "content"
+          });
+        } );
+        </script>
+<!--sortable -->
+      <script>
+      $( function() {
+        $( "#accordion6" )
+          .accordion({
+            header: "> div > h3"
+          })
+          .sortable({
+            axis: "y",
+            handle: "h3",
+            stop: function( event, ui ) {
+              // IE doesn't register the blur when sorting
+              // so trigger focusout handlers to remove .ui-state-focus
+              ui.item.children( "h3" ).triggerHandler( "focusout" );
+     
+              // Refresh accordion to handle new order
+              $( this ).accordion( "refresh" );
+            }
+          });
+      } );
+      </script>
+
+<!-- *************autocomplte*********** -->
+<!-- default -->
+       <script>
+          $( function() {
+            var availableTags = [
+              "ActionScript",
+              "AppleScript",
+              "Asp",
+              "BASIC",
+              "C",
+              "C++",
+              "Clojure",
+              "COBOL",
+              "ColdFusion",
+              "Erlang",
+              "Fortran",
+              "Groovy",
+              "Haskell",
+              "Java",
+              "JavaScript",
+              "Lisp",
+              "Perl",
+              "PHP",
+              "Python",
+              "Ruby",
+              "Scala",
+              "Scheme"
+            ];
+            $( "#tags" ).autocomplete({
+              source: availableTags
+            });
+          } );
+          </script>
+<!-- combobox -->
+        <script>
+  $( function() {
+    $.widget( "custom.combobox", {
+      _create: function() {
+        this.wrapper = $( "<span>" )
+          .addClass( "custom-combobox" )
+          .insertAfter( this.element );
+ 
+        this.element.hide();
+        this._createAutocomplete();
+        this._createShowAllButton();
+      },
+ 
+      _createAutocomplete: function() {
+        var selected = this.element.children( ":selected" ),
+          value = selected.val() ? selected.text() : "";
+ 
+        this.input = $( "<input>" )
+          .appendTo( this.wrapper )
+          .val( value )
+          .attr( "title", "" )
+          .addClass( "custom-combobox-input ui-widget4 ui-widget4-content ui-state-default ui-corner-left" )
+          .autocomplete({
+            delay: 0,
+            minLength: 0,
+            source: $.proxy( this, "_source" )
+          })
+          .tooltip({
+            classes: {
+              "ui-tooltip": "ui-state-highlight"
+            }
+          });
+ 
+        this._on( this.input, {
+          autocompleteselect: function( event, ui ) {
+            ui.item.option.selected = true;
+            this._trigger( "select", event, {
+              item: ui.item.option
+            });
+          },
+ 
+          autocompletechange: "_removeIfInvalid"
+        });
+      },
+ 
+      _createShowAllButton: function() {
+        var input = this.input,
+          wasOpen = false;
+ 
+        $( "<a>" )
+          .attr( "tabIndex", -1 )
+          .attr( "title", "Show All Items" )
+          .tooltip()
+          .appendTo( this.wrapper )
+          .button({
+            icons: {
+              primary: "ui-icon-triangle-1-s"
+            },
+            text: false
+          })
+          .removeClass( "ui-corner-all" )
+          .addClass( "custom-combobox-toggle ui-corner-right" )
+          .on( "mousedown", function() {
+            wasOpen = input.autocomplete( "widget" ).is( ":visible" );
+          })
+          .on( "click", function() {
+            input.trigger( "focus" );
+ 
+            // Close if already visible
+            if ( wasOpen ) {
+              return;
+            }
+ 
+            // Pass empty string as value to search for, displaying all results
+            input.autocomplete( "search", "" );
+          });
+      },
+ 
+      _source: function( request, response ) {
+        var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
+        response( this.element.children( "option" ).map(function() {
+          var text = $( this ).text();
+          if ( this.value && ( !request.term || matcher.test(text) ) )
+            return {
+              label: text,
+              value: text,
+              option: this
+            };
+        }) );
+      },
+ 
+      _removeIfInvalid: function( event, ui ) {
+ 
+        // Selected an item, nothing to do
+        if ( ui.item ) {
+          return;
+        }
+ 
+        // Search for a match (case-insensitive)
+        var value = this.input.val(),
+          valueLowerCase = value.toLowerCase(),
+          valid = false;
+        this.element.children( "option" ).each(function() {
+          if ( $( this ).text().toLowerCase() === valueLowerCase ) {
+            this.selected = valid = true;
+            return false;
+          }
+        });
+ 
+        // Found a match, nothing to do
+        if ( valid ) {
+          return;
+        }
+ 
+        // Remove invalid value
+        this.input
+          .val( "" )
+          .attr( "title", value + " didn't match any item" )
+          .tooltip( "open" );
+        this.element.val( "" );
+        this._delay(function() {
+          this.input.tooltip( "close" ).attr( "title", "" );
+        }, 2500 );
+        this.input.autocomplete( "instance" ).term = "";
+      },
+ 
+      _destroy: function() {
+        this.wrapper.remove();
+        this.element.show();
+      }
+    });
+ 
+    $( "#combobox" ).combobox();
+    $( "#toggle" ).on( "click", function() {
+      $( "#combobox" ).toggle();
+    });
+  } );
+  </script>
+<!-- xml data  -->
+      <script>
+  $( function() {
+    function log( message ) {
+      $( "<div/>" ).text( message ).prependTo( "#log" );
+      $( "#log" ).attr( "scrollTop", 0 );
+    }
+ 
+    $.ajax({
+      url: "london.xml",
+      dataType: "xml",
+      success: function( xmlResponse ) {
+        var data = $( "geoname", xmlResponse ).map(function() {
+          return {
+            value: $( "name", this ).text() + ", " +
+              ( $.trim( $( "countryName", this ).text() ) || "(unknown country)" ),
+            id: $( "geonameId", this ).text()
+          };
+        }).get();
+        $( "#birds" ).autocomplete({
+          source: data,
+          minLength: 0,
+          select: function( event, ui ) {
+            log( ui.item ?
+              "Selected: " + ui.item.value + ", geonameId: " + ui.item.id :
+              "Nothing selected, input was " + this.value );
+          }
+        });
+      }
+    });
+  } );
+  </script>
+
+  <!-- ***************checkbox*************** -->
+  <!-- default -->
+        <script>
+          $( function() {
+            $( "input" ).checkboxradio();
+          } );
+          </script>
+<!-- no icons -->
+       <script>
+           $( function() {
+        $( "input" ).checkboxradio({
+          icon: false
+        });
+      } );
+      </script>
+<!-- product selector -->
+        <script>
+          $( function() {
+            function handleShape( e ) {
+              $( ".shape" )
+                .removeClass( "circle pill square rectangle" )
+                .addClass( $( e.target ).val() );
+            };
+            function handleToggle( e ) {
+              var target = $( e.target );
+         
+              if ( target.is( ".brand-toggle" ) ) {
+                var checked = target.is( ":checked" ),
+                  value = $( "[name='brand']" )
+                    .filter( ":checked" )
+                    .attr( "data-" + target[ 0 ].id )
+                $( ".shape" ).css( target[ 0 ].id, checked ? value : "" );
+              } else {
+                $( ".shape" ).toggleClass( target[ 0 ].id, target.is( ":checked") );
+              }
+            }
+            function updateBrand() {
+              handleShape( { target: $( "[name='shape']:checked" ) } );
+              $( ".toggle:checked" ).each( function() {
+                handleToggle( { target: $( this ) } );
+              } );
+            }
+         
+            // Initalize widgets
+            $( "input" ).checkboxradio();
+            $( ".shape-bar, .brand" ).controlgroup();
+            $( ".toggles" ).controlgroup( {
+              direction: "vertical"
+            } );
+         
+            // Bind event handlers
+            $( "[name='shape']").on( "change", handleShape );
+            $( ".toggle" ).on( "change", handleToggle );
+            $( "[name='brand']").on( "change", updateBrand );
+         
+            // Set initial values
+            updateBrand();
+          } );
+          </script>
+
+<!-- ***********DatePicker************ -->
+<!-- animation -->
+          <script>
+            $( function() {
+              $( "#datepicker" ).datepicker();
+              $( "#anim" ).on( "change", function() {
+                $( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
+              });
+            } );
+            </script>
+<!-- display multiple months -->
+       <script>
+          $( function() {
+            $( "#datepicker7" ).datepicker({
+              numberOfMonths: 3,
+              showButtonPanel: true
+            });
+          } );
+          </script>
+<!-- localize calender -->
+        <script>
+        $( function() {
+          $( "#datepicker8" ).datepicker( $.datepicker.regional[ "fr" ] );
+          $( "#locale" ).on( "change", function() {
+            $( "#datepicker8" ).datepicker( "option",
+              $.datepicker.regional[ $( this ).val() ] );
+          });
+        } );
+        </script>
+<!-- show week -->
+         <script>
+            $( function() {
+              $( "#datepicker9" ).datepicker({
+                showWeek: true,
+                firstDay: 1
+              });
+            } );
+            </script>
+
+<!-- ***********Dialog -->
+<!-- default -->
+           <script>
+              $( function() {
+                $( "#dialog" ).dialog();
+              } );
+              </script>
+  <!-- animation -->
+           <script>
+              $( function() {
+                $( "#dialog2" ).dialog({
+                  autoOpen: false,
+                  show: {
+                    effect: "blind",
+                    duration: 1000
+                  },
+                  hide: {
+                    effect: "explode",
+                    duration: 1000
+                  }
+                });
+             
+                $( "#opener" ).on( "click", function() {
+                  $( "#dialog2" ).dialog( "open" );
+                });
+              } );
+              </script>  
+  <!-- modal confirmation -->
+           <script>
+              $( function() {
+                $( "#dialog-confirm" ).dialog({
+                  resizable: false,
+                  height: "auto",
+                  width: 400,
+                  modal: true,
+                  buttons: {
+                    "Delete all items": function() {
+                      $( this ).dialog( "close" );
+                    },
+                    Cancel: function() {
+                      $( this ).dialog( "close" );
+                    }
+                  }
+                });
+              } );
+              </script>
+
+<!-- ***********progress bar**************** -->
+<!-- default -->
+        <script>
+          $( function() {
+            $( "#progressbar1" ).progressbar({
+              value: 37
+            });
+          } );
+          </script>
+<!-- custom label -->
+        <script>
+          $( function() {
+            var progressbar = $( "#progressbar" ),
+              progressLabel = $( ".progress-label" );
+         
+            progressbar.progressbar({
+              value: false,
+              change: function() {
+                progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+              },
+              complete: function() {
+                progressLabel.text( "Complete!" );
+              }
+            });
+         
+            function progress() {
+              var val = progressbar.progressbar( "value" ) || 0;
+         
+              progressbar.progressbar( "value", val + 2 );
+         
+              if ( val < 99 ) {
+                setTimeout( progress, 80 );
+              }
+            }
+         
+            setTimeout( progress, 2000 );
+          } );
+          </script>
+
+
+<!-- *************tabs***************** -->
+<!-- /vertical tabs -->
+       <script>
+          $( function() {
+            $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+            $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+          } );
+          </script>
+      
+<!-- *****************tooltip************* -->
+<!-- custom content -->
+          <script>
+            $( function() {
+              $( document ).tooltip({
+                items: "img, [data-geo], [title]",
+                content: function() {
+                  var element = $( this );
+                  if ( element.is( "[data-geo]" ) ) {
+                    var text = element.text();
+                    return "<img class='map' alt='" + text +
+                      "' src='http://maps.google.com/maps/api/staticmap?" +
+                      "zoom=11&size=350x350&maptype=terrain&sensor=false&center=" +
+                      text + "'>";
+                  }
+                  if ( element.is( "[title]" ) ) {
+                    return element.attr( "title" );
+                  }
+                  if ( element.is( "img" ) ) {
+                    return element.attr( "alt" );
+                  }
+                }
+              });
+            } );
+            </script>
+     <!-- track the mouse -->
+       <script>
+        $( function() {
+          $( document ).tooltip({
+            track: true
+          });
+        } );
+        </script>
+
+<!-- *****************Effect*********** -->
+         <script>
+            $( function() {
+              // run the currently selected effect
+              function runEffect() {
+                // get effect type from
+                var selectedEffect = $( "#effectTypes" ).val();
+           
+                // Most effect types need no options passed by default
+                var options = {};
+                // some effects have required parameters
+                if ( selectedEffect === "scale" ) {
+                  options = { percent: 50 };
+                } else if ( selectedEffect === "transfer" ) {
+                  options = { to: "#button", className: "ui-effects-transfer" };
+                } else if ( selectedEffect === "size" ) {
+                  options = { to: { width: 200, height: 60 } };
+                }
+           
+                // Run the effect
+                $( "#effect" ).effect( selectedEffect, options, 500, callback );
+              };
+           
+              // Callback function to bring a hidden box back
+              function callback() {
+                setTimeout(function() {
+                  $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+                }, 1000 );
+              };
+           
+              // Set effect from select menu value
+              $( "#button" ).on( "click", function() {
+                runEffect();
+                return false;
+              });
+            } );
+            </script>
+  <!-- add class -->
+            <script>
+  $( function() {
+    $( "#button2" ).on( "click", function() {
+      $( "#effect2" ).addClass( "newClass", 1000, callback );
+    });
+ 
+    function callback() {
+      setTimeout(function() {
+        $( "#effect2" ).removeClass( "newClass" );
+      }, 1500 );
+    }
+  } );
+  </script>
+  </body>
+</html>
